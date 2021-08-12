@@ -5,10 +5,10 @@
         "device": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json"
+        "assets.json",
+        "api.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -20,5 +20,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
