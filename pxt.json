@@ -8,13 +8,14 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "api.ts"
+        "api.ts",
+        "state.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.4.45",
+        "target": "1.5.46",
         "targetId": "arcade"
     },
     "supportedTargets": [

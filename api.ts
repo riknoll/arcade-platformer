@@ -23,7 +23,7 @@ namespace platformer {
         //% block="walking left"
         WalkingLeft,
         //% block="walking right"
-        WakingRight,
+        WalkingRight,
         //% block="jumping left"
         JumpingLeft,
         //% block="jumping right"
@@ -51,7 +51,7 @@ namespace platformer {
     //% group="Gravity"
     //% weight=100
     export function setGravity(gravity: number) {
-
+        state().setGravity(gravity);
     }
 
     //% blockId=platformer_set_gravity_for_sprite
@@ -62,7 +62,7 @@ namespace platformer {
     //% group="Gravity"
     //% weight=80
     export function setGravityForSprite(sprite: Sprite, gravity: number) {
-
+        state().setGravityForSprite(sprite, gravity);
     }
 
     //% blockId=platformer_set_gravity_direction
@@ -71,7 +71,7 @@ namespace platformer {
     //% group="Gravity"
     //% weight=60
     export function setGravityDirection(direction: number) {
-
+        state().setGravityDirection(direction);
     }
 
     //% blockId=platformer_control_sprite
@@ -82,7 +82,7 @@ namespace platformer {
     //% group="Actions"
     //% weight=100
     export function controlSprite(sprite: Sprite, speed: number) {
-
+        state().controlSprite(sprite, speed);
     }
 
     //% blockId=platformer_do_jump
@@ -93,7 +93,7 @@ namespace platformer {
     //% group="Actions"
     //% weight=90
     export function doJump(sprite: Sprite, height: number) {
-
+        state().doJump(sprite, height)
     }
 
     //% blockId=platformer_is_on_ground
@@ -103,7 +103,7 @@ namespace platformer {
     //% group="Actions"
     //% weight=80
     export function isOnGround(sprite: Sprite): boolean {
-        return false;
+        return state().isOnGround(sprite);
     }
 
     //% blockId=platformer_is_facing
@@ -114,7 +114,7 @@ namespace platformer {
     //% group="Actions"
     //% weight=60
     export function isFacing(sprite: Sprite, direction: number) {
-        return false;
+        return state().isFacing(sprite, direction);
     }
 
 
@@ -128,7 +128,7 @@ namespace platformer {
     //% group="Actions"
     //% weight=50
     export function setAnimation(sprite: Sprite, animationType: number, frames: Image[], interval: number) {
-
+        state().setAnimation(sprite, animationType, frames, interval);
     }
 
 
@@ -140,7 +140,7 @@ namespace platformer {
     //% group="Events"
     //% weight=100
     export function onSpriteHitsObstacle(kind: number, obstacle: number, handler: (sprite: Sprite, location: tiles.Location) => void) {
-
+        state().onSpriteHitsObstacle(kind, obstacle, handler);
     }
 
     //% blockId=platformer_on_sprite_approaches_ledge
@@ -150,7 +150,7 @@ namespace platformer {
     //% group="Events"
     //% weight=80
     export function onSpriteApproachesLedge(kind: number, handler: (sprite: Sprite, location: tiles.Location) => void) {
-
+        state().onSpriteApproachesLedge(kind, handler);
     }
 
     //% blockId=platformer_on_sprite_lands_on_top_of
@@ -161,7 +161,7 @@ namespace platformer {
     //% group="Events"
     //% weight=60
     export function onSpriteLandsOnTopOf(kind1: number, kind2: number, handler: (sprite: Sprite, otherSprite: Sprite) => void) {
-
+        state().onSpriteLandsOnTopOf(kind1, kind2, handler);
     }
 
     //% blockId=platformer_gravity_direction_picker
